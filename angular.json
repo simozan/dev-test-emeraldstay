@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yield-simulator": {
+    "yield-net-return-simulator": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/yield-simulator",
+            "outputPath": "dist/yield-net-return-simulator",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "yield-simulator:build:production"
+              "buildTarget": "yield-net-return-simulator:build:production"
             },
             "development": {
-              "buildTarget": "yield-simulator:build:development"
+              "buildTarget": "yield-net-return-simulator:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,5 +1,5 @@
 {
-  "name": "yield-simulator",
+  "name": "yield-net-return-simulator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:yield-simulator": "node dist/yield-simulator/server/server.mjs"
+    "serve:ssr:yield-net-return-simulator": "node dist/yield-net-return-simulator/server/server.mjs"
   },
   "private": true,
   "dependencies": {

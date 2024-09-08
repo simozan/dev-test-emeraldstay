@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'yield-simulator' title`, () => {
+  it(`should have the 'yield-net-return-simulator' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('yield-simulator');
+    expect(app.title).toEqual('yield-net-return-simulator');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, yield-simulator');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, yield-net-return-simulator');
   });
 });
