@@ -1,21 +1,31 @@
-<form (ngSubmit)="calculateYield()">
-    <div>
+<h1 class="page-title" class="page-title">Yield Net Return Simulator</h1>
+<form (ngSubmit)="calculateYield()" class="calculator-form">
+    <div class="form-group">
         <label for="purchasePrice">Purchase price of the property:</label>
         <input type="number" id="purchasePrice" [(ngModel)]="purchasePrice" name="purchasePrice" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="monthlyRent">Montly rent amount:</label>
         <input type="number" id="monthlyRent" [(ngModel)]="monthlyRent" name="monthlyRent" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="rentalFee">Annual rental fee (%):</label>
         <input type="number" id="rentalFee" [(ngModel)]="rentalFee" name="rentalFee" required>
     </div>
-    <button type="submit">Calculate</button>
+    <button type="submit" class="btn-calculate">Calculate</button>
 </form>
 
-<div>
-    <p>The first year net income is: {{result.incomeYear1 | currency }}</p>
-    <p>The second year net income is: {{result.incomeYear2 | currency }}</p>
-    <p>The third year net income is: {{result.incomeYear3 | currency }}</p>
+<div class="results">
+    <div class="result-item">
+        <p>The first year net income is: {{result.incomeYear1 | currency }}</p>
+        <p>The first year monthly net income is: {{result.incomeMonthlyYear1 | currency }}</p>
+    </div>
+    <div class="result-item">
+        <p>The second year net income is: {{result.incomeYear2 | currency }}</p>
+        <p>The second year monthly net income is: {{result.incomeMonthlyYear2 | currency }}</p>
+    </div>
+    <div class="result-item">
+        <p>The third year net income is: {{result.incomeYear3 | currency }}</p>
+        <p>The third year net income is: {{result.incomeMonthlyYear3 | currency }}</p>
+    </div>
 </div>

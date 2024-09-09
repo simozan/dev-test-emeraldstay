@@ -13,7 +13,7 @@ export class YieldNetSimulatorComponent {
   purchasePrice: number = 0;
   monthlyRent: number = 0;
   rentalFee: number = 0;
-  result: any;
+  result: any ={};
 
   calculateYield() {
     const annualRent = this.monthlyRent * 12;
@@ -24,10 +24,17 @@ export class YieldNetSimulatorComponent {
     const incomeYear3 =
       annualRent * (1 - 0.2) - (this.rentalFee / 100) * this.purchasePrice;
 
+      const incomeMonthlyYear1 = incomeYear1/12
+      const incomeMonthlyYear2 = incomeYear2/12
+      const incomeMonthlyYear3 = incomeYear3/12
+
     this.result = {
       incomeYear1: incomeYear1,
       incomeYear2: incomeYear2,
       incomeYear3: incomeYear3,
+      incomeMonthlyYear1: incomeMonthlyYear1,
+      incomeMonthlyYear2: incomeMonthlyYear2,
+      incomeMonthlyYear3: incomeMonthlyYear3,
     };
   }
 }
